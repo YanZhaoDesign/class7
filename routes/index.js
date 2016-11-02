@@ -37,12 +37,12 @@ router.get('/sample-page', function(req,res){
 router.post('/api/create', function(req, res){
 
     console.log(req.body);
-
+    console.log('api/save route hit!');
     // pull out the information from the req.body
     var name = req.body.name;
-    var age = req.body.age;
+    var age = parseInt(req.body.age);
     var tags = req.body.tags.split(","); // split string into array
-    var weight = req.body.weight;
+    var weight = parseInt(req.body.weight);
     var color = req.body.color;
     var url = req.body.url;
 
